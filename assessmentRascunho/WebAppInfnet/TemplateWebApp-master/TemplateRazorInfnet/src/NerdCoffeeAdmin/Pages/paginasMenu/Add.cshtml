@@ -1,0 +1,49 @@
+﻿@page "/Pintura/add"
+@model MeuMiniMuseu.Pages.paginasMenu.AddModel
+@{
+}
+
+
+
+
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="content">
+          
+        <form method="Post" enctype="multipart/form-data">
+            <div asp-validation-summary="All"></div>
+                
+            <div class="mb-3">
+                <label asp-for="NewPainting.Nome">Nome</label>
+                <input asp-for="NewPainting.Nome" class="form-control" />
+                <span asp-validation-for="NewPainting.Nome"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="NewPainting.Artista">Artista</label>
+                <input asp-for="NewPainting.Artista " class="form-control" />
+            </div>
+            <div class="mb-3">
+                <label asp-for="NewPainting.Movimento ">Movimento </label>
+                <input asp-for="NewPainting.Movimento " class="form-control"> </input>
+            </div>
+         
+            <div class="mb-3">
+                <label asp-for="NewPainting.AnoCriacao">Ano de Criação</label>
+                <input asp-for="NewPainting.AnoCriacao" class="form-control" />
+            </div>
+            <div class="mb-3">
+                <label asp-for="NewPainting.Upload">Upload</label>
+                <input asp-for="NewPainting.Upload" class="form-control" />
+            </div>
+            <button class="btn btn-success">Create</button>
+        </form>
+         @section RightFooter
+{
+            <img src="~/images/primavera.jpg" width="1375" height="650" />
+}
+    </div>
+</div>
+</div>
+
+
